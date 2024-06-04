@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Young+Serif&display=swap");
+
+:root {
+  /*fonts*/
+
+  --young-serif: "Young Serif", serif;
+  --outfit: "Outfit", sans-serif;
+
+  /*### Font size (px)*/
+
+  --paragraph: 16px;
+
+  /*### Font weights*/
+
+  --regular: 400;
+  --medium: 600;
+  --bold: 700;
+
+  /*### Colors*/
+
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+  --light-raspberry: #fff7fc;
+  --brown: #7f4938;
+}
+
+body {
+  font-family: var(--outfit);
+  font-size: var(--paragraph);
+  background-color: var(--eggshell);
+  margin: 10% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*container*/
+.container {
+  max-width: 1440px;
+  width: 45%;
+  padding: 45px;
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 0 5px 5px var(--light-grey);
+}
+
+/*recipe*/
+
+.recipe {
+  margin-bottom: 40px;
+}
+
+.recipe .title {
+  font-size: 40px;
+  font-weight: var(--bold);
+  color: var(--dark-charcoal);
+  margin-bottom: 10px;
+  font-family: var(--young-serif);
+}
+
+.recipe .description {
+  color: var(--wenge-brown);
+  margin-bottom: 30px;
+  line-height: 25px;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/*preparation*/
+
+.preparation {
+  margin-bottom: 40px;
+  background-color: var(--light-raspberry);
+  border-radius: 10px;
+  padding: 2px 20px;
+}
+
+.preparation .title {
+  font-size: 20px;
+  font-weight: var(--bold);
+  color: var(--dark-raspberry);
+  margin-bottom: 10px;
+  font-family: var(--young-serif);
+  padding-top: 10px;
+}
+
+.preparation ul {
+  padding: 10px 30px;
+  line-height: 25px;
+}
+
+.preparation ul li {
+  line-height: 30px;
+  color: var(--wenge-brown);
+  font-weight: var(--medium);
+}
+.preparation ul li::marker {
+  color: var(--wenge-brown);
+}
+
+.preparation ul li span {
+  font-weight: var(--bold);
+  color: var(--dark-charcoal);
+  margin-left: 15px;
+}
+
+/*section*/
+hr {
+  border: 1px solid var(--light-grey);
+  margin-bottom: 20px;
+}
+/*ingredients*/
+
+.ingredients {
+  margin-bottom: 20px;
+}
+
+.ingredients .title {
+  font-size: 30px;
+  font-weight: var(--bold);
+  color: var(--brown);
+  margin-bottom: 10px;
+  font-family: var(--young-serif);
+}
+
+.ingredients ul {
+  padding: 10px 30px;
+  margin-left: -5px;
+}
+
+.ingredients ul li {
+  line-height: 32px;
+  color: var(--wenge-brown);
+  font-weight: var(--regular);
+}
+
+.ingredients ul li::marker {
+  color: var(--wenge-brown);
+}
+
+.ingredients ul li span {
+  color: var(--dark-charcoal);
+  margin-left: 15px;
+}
+
+/*instructions*/
+
+.instructions {
+  margin-bottom: 20px;
+}
+
+.instructions .title {
+  font-size: 30px;
+  font-weight: var(--bold);
+  color: var(--brown);
+  margin-bottom: 10px;
+  font-family: var(--young-serif);
+}
+
+.instructions ol {
+  padding: 10px 30px;
+  margin-left: -5px;
+}
+
+.instructions ol li {
+  line-height: 32px;
+  color: var(--wenge-brown);
+  font-weight: var(--regular);
+  padding-left: 15px;
+}
+
+.instructions ol li::marker {
+  color: var(--wenge-brown);
+}
+
+.instructions ol li span {
+  color: var(--dark-charcoal);
+}
+
+/*nutrition*/
+
+.nutrition .title {
+  font-size: 30px;
+  font-weight: var(--bold);
+  color: var(--brown);
+  margin-bottom: 10px;
+  font-family: var(--young-serif);
+}
+
+.nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrition td {
+  padding: 10px 0;
+  color: var(--wenge-brown);
+  font-weight: var(--regular);
+}
+
+.nutrition td:first-child {
+  text-align: left;
+}
+
+.nutrition table tr:nth-child(1),
+.nutrition table tr:nth-child(2),
+.nutrition table tr:nth-child(3),
+.nutrition table tr:last-child {
+  border-bottom: 1px solid var(--light-grey);
+  margin-top: 15px;
+}
+
+/*attribution*/
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--wenge-brown);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*responsive*/
+
+@media (max-width: 375px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    padding: 20px;
+    width: 100%;
+  }
+
+ 
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
